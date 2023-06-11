@@ -1,4 +1,4 @@
-import { Application } from "@prisma/client";
+import { Application, Message } from "@prisma/client";
 
 export type Prices = {
   standard: number;
@@ -20,5 +20,9 @@ export type Config = {
 
 export type Applications = (Omit<Application, "createdAt" | "birthdate"> & {
   birthdate: string;
+  createdAt: string;
+})[];
+
+export type Messages = (Omit<Message, "createdAt"> & {
   createdAt: string;
 })[];

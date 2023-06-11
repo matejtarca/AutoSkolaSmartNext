@@ -3,7 +3,10 @@ import AdminPortal, {
   AdminPortalProps,
 } from "../../workspaces/web-client/src/scenes/AdminPortal/AdminPortal";
 import prisma from "../../workspaces/web-client/src/db/db";
-import { Applications } from "../../workspaces/web-client/src/services/types";
+import {
+  Applications,
+  Messages,
+} from "../../workspaces/web-client/src/services/types";
 import { NextApiRequest, NextPage } from "next";
 import { verify } from "jsonwebtoken";
 import { defaultConfig } from "../../workspaces/web-client/src/services/consts";
@@ -49,6 +52,12 @@ export const getServerSideProps = async ({ req }: { req: NextApiRequest }) => {
     createdAt: application.createdAt.toLocaleDateString("sk-SK"),
   }));
 
+  const messagesFull = await prisma.message.findMany();
+  const messages: Messages = messagesFull.map((message) => ({
+    ...message,
+    createdAt: message.createdAt.toLocaleDateString("sk-SK"),
+  }));
+
   const configData = await prisma.configuration.findFirst({ where: { id: 1 } });
   const config = configData
     ? {
@@ -69,6 +78,7 @@ export const getServerSideProps = async ({ req }: { req: NextApiRequest }) => {
     : defaultConfig;
   const props: AdminPortalProps = {
     applications,
+    messages,
     currentConfig: config,
   };
   return {

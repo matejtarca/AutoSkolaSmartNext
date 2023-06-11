@@ -1,21 +1,19 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 const Navbar = () => {
   return (
     <header className="fixed-top" id="header">
       <div className="container d-flex align-items-center">
-        <a className="logo">
-          <Link href="/">
-            <Image
-              className="img-fluid"
-              src="/assets/img/autoskolasmart-svg.png"
-              alt=""
-              width={93}
-              height={60}
-            />
-          </Link>
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a className="logo" href="/">
+          <Image
+            className="img-fluid"
+            src="/assets/img/autoskolasmart-svg.png"
+            alt=""
+            width={93}
+            height={60}
+          />
         </a>
         <p className="navbar-text">
           <i className="bi bi-telephone-fill"></i> 0903 747 877, 0917 976 016

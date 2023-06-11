@@ -53,6 +53,7 @@ const ApplicationsTable = ({ applications }: ApplicationsTableProps) => {
           padding: 3px;
         }
       `}</style>
+      <h2 style={{ marginTop: 20 }}>Prihlášky</h2>
       <table>
         <thead>
           <tr>

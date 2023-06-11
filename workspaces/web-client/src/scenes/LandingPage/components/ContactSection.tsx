@@ -1,6 +1,26 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { useMutation } from "react-query";
+import { Message } from "../../../services/types";
+
+type ContactFormFields = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 const ContactSection = () => {
+  const { register, handleSubmit, reset } = useForm<ContactFormFields>({});
+  const { mutateAsync } = useMutation((data: Message) => {
+    return fetch("/api/send-message", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+  });
+  const onSubmit = async (data: ContactFormFields) => {
+    await mutateAsync(data);
+    reset();
+  };
   return (
     <section className="contact" id="contact">
       <div className="container">
@@ -72,11 +92,9 @@ const ContactSection = () => {
           <div className="col-lg-6 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form
               className="php-email-form"
-              action=""
-              method="post"
               role="form"
+              onSubmit={handleSubmit(onSubmit)}
             >
-              <input type="hidden" name="type" value="contact" />
               <div className="row">
                 <div className="form-group col-md-6">
                   <label htmlFor="name">Meno</label>
@@ -84,8 +102,7 @@ const ContactSection = () => {
                     className="form-control"
                     id="name"
                     type="text"
-                    name="name"
-                    required
+                    {...register("name", { required: true })}
                   />
                 </div>
                 <div className="form-group col-md-6">
@@ -94,28 +111,16 @@ const ContactSection = () => {
                     className="form-control"
                     id="email"
                     type="email"
-                    name="email"
-                    required
+                    {...register("email", { required: true })}
                   />
                 </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="name">Predmet</label>
-                <input
-                  className="form-control"
-                  id="subject"
-                  type="text"
-                  name="subject"
-                  required
-                />
               </div>
               <div className="form-group">
                 <label htmlFor="name">Správa</label>
                 <textarea
                   className="form-control"
-                  name="message"
                   rows={10}
-                  required
+                  {...register("message", { required: true })}
                 ></textarea>
               </div>
               <div className="my-3">
