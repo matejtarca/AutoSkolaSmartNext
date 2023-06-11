@@ -1,5 +1,6 @@
 import React from "react";
 import Script from "next/script";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -20,11 +21,13 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="col-lg-7 order-1 order-lg-2 hero-img">
-              <div>
-                <img
-                  className="img-fluid animated"
-                  src="/assets/img/corsa-naweb-v4.png"
-                  alt=""
+              <div className="hero-img-wrapper">
+                <Image
+                  className="animated"
+                  src="/assets/img/corsa-naweb-v4.webp"
+                  alt="Opel corsa auto"
+                  fill
+                  priority
                 />
               </div>
             </div>
