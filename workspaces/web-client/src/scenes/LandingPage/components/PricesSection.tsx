@@ -163,7 +163,6 @@ const PricesSection = ({ prices }: PricesSectionProps) => {
             </li>
           </ul>
         </div>
-        <p>Sme platcami DPH (IČ DPH: SK1020650851).</p>
       </div>
     </section>
   );
