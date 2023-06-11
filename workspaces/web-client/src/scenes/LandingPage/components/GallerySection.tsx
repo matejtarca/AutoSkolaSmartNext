@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const GallerySection = () => {
   return (
@@ -10,10 +11,10 @@ const GallerySection = () => {
         <div className="row portfolio-container">
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-img">
-              <img
-                className="img-fluid"
+              <Image
+                layout="fill"
                 src="/assets/img/portfolio/tiny/auto1.JPG"
-                alt=""
+                alt="Opel corsa auto"
               />
             </div>
             <div className="portfolio-info">
@@ -22,10 +23,10 @@ const GallerySection = () => {
           </div>
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-img">
-              <img
-                className="img-fluid"
+              <Image
+                layout="fill"
                 src="/assets/img/portfolio/tiny/auto2.JPG"
-                alt=""
+                alt="Opel corsa auto"
               />
             </div>
             <div className="portfolio-info">
@@ -34,10 +35,10 @@ const GallerySection = () => {
           </div>
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-img">
-              <img
-                className="img-fluid"
+              <Image
+                layout="fill"
                 src="/assets/img/portfolio/tiny/auto3.JPG"
-                alt=""
+                alt="Opel corsa auto"
               />
             </div>
             <div className="portfolio-info">
@@ -46,10 +47,10 @@ const GallerySection = () => {
           </div>
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-img">
-              <img
-                className="img-fluid"
+              <Image
+                layout="fill"
                 src="/assets/img/portfolio/tiny/Suzuki Swift 1.jpeg"
-                alt=""
+                alt="Suzuki swift auto"
               />
             </div>
             <div className="portfolio-info">
@@ -58,10 +59,10 @@ const GallerySection = () => {
           </div>
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-img">
-              <img
-                className="img-fluid"
+              <Image
+                layout="fill"
                 src="/assets/img/portfolio/tiny/Suzuki Swift 2.jpeg"
-                alt=""
+                alt="Suzuki swift auto"
               />
             </div>
             <div className="portfolio-info">
@@ -70,10 +71,10 @@ const GallerySection = () => {
           </div>
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-img">
-              <img
-                className="img-fluid"
+              <Image
+                layout="fill"
                 src="/assets/img/portfolio/tiny/ucebna1.JPG"
-                alt=""
+                alt="Obrázok učebne"
               />
             </div>
             <div className="portfolio-info">

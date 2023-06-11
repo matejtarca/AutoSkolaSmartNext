@@ -964,6 +964,8 @@ section {
 
 .portfolio .portfolio-item .portfolio-img {
   overflow: hidden;
+  height: 220px;
+  position: relative;
 }
 
 .portfolio .portfolio-item .portfolio-img img {
