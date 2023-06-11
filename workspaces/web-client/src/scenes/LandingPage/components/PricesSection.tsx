@@ -129,19 +129,19 @@ const PricesSection = ({ prices }: PricesSectionProps) => {
           <ul>
             <li>
               Kondičná jazda sk. B (1 x 45 minút) (platí pre záujemcov s
-              vodičským preukazom) - <b>20 €</b>
+              vodičským preukazom) - <b>{prices.condDrive} €</b>
             </li>
             <li>
               Doplnková jazda sk. B (1 x 45 minút) (platí pre účastníkov kurzu,
-              ktorí si chcú dokúpiť viacej jázd) - <b>15 €</b>
+              ktorí si chcú dokúpiť viacej jázd) - <b>{prices.addDrive} €</b>
             </li>
             <li>
               Náhradná vyučovacia hodina teórie (1 x 45 minút) (v prípade
-              vymeškania riadnej výučby teórie) - <b>10 €</b>
+              vymeškania riadnej výučby teórie) - <b>{prices.theoryLesson} €</b>
             </li>
             <li>
               Stojné inštruktora (platí účastník kurzu, ak zruší naplánovanú
-              jazdu neskôr ako 24 hodín vopred) - <b>15 €</b>
+              jazdu neskôr ako 24 hodín vopred) - <b>{prices.standingInstructor} €</b>
             </li>
           </ul>
         </div>
@@ -156,10 +156,10 @@ const PricesSection = ({ prices }: PricesSectionProps) => {
           </p>
           <ul>
             <li>
-              Skúška na VP skupiny B - <b>33 €</b>
+              Skúška na VP skupiny B - <b>{prices.examFee} €</b>
             </li>
             <li>
-              Opakovaná skúška na VP skupiny B - <b>8 €</b>
+              Opakovaná skúška na VP skupiny B - <b>{prices.examRepeatFee} €</b>
             </li>
           </ul>
         </div>

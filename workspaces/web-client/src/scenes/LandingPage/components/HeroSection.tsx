@@ -22,7 +22,7 @@ const HeroSection = () => {
             <div className="col-lg-7 order-1 order-lg-2 hero-img">
               <div>
                 <img
-                  className="animated"
+                  className="img-fluid animated"
                   src="/assets/img/corsa-naweb-v4.png"
                   alt=""
                 />

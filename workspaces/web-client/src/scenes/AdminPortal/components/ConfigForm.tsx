@@ -11,6 +11,12 @@ type ConfigFormFields = {
   priceQuick: string;
   priceExtraQuick: string;
   priceIndividual: string;
+  priceCondDrive: string;
+  priceAddDrive: string;
+  priceTheoryLesson: string;
+  priceStandingInstructor: string;
+  priceExamFee: string;
+  priceExamRepeatFee: string;
 };
 const ConfigForm = ({ currentConfig }: ConfigFormProps) => {
   const { register, handleSubmit } = useForm<ConfigFormFields>({
@@ -20,6 +26,13 @@ const ConfigForm = ({ currentConfig }: ConfigFormProps) => {
       priceQuick: currentConfig.prices.quick.toString(),
       priceExtraQuick: currentConfig.prices.superQuick.toString(),
       priceIndividual: currentConfig.prices.individual.toString(),
+      priceCondDrive: currentConfig.prices.condDrive.toString(),
+      priceAddDrive: currentConfig.prices.addDrive.toString(),
+      priceTheoryLesson: currentConfig.prices.theoryLesson.toString(),
+      priceStandingInstructor:
+        currentConfig.prices.standingInstructor.toString(),
+      priceExamFee: currentConfig.prices.examFee.toString(),
+      priceExamRepeatFee: currentConfig.prices.examRepeatFee.toString(),
     },
   });
   const { mutateAsync } = useMutation(async (data: Config) => {
@@ -38,6 +51,12 @@ const ConfigForm = ({ currentConfig }: ConfigFormProps) => {
         quick: Number(data.priceQuick),
         superQuick: Number(data.priceExtraQuick),
         individual: Number(data.priceIndividual),
+        condDrive: Number(data.priceCondDrive),
+        addDrive: Number(data.priceAddDrive),
+        theoryLesson: Number(data.priceTheoryLesson),
+        standingInstructor: Number(data.priceStandingInstructor),
+        examFee: Number(data.priceExamFee),
+        examRepeatFee: Number(data.priceExamRepeatFee),
       },
     });
     push("/");
@@ -95,6 +114,64 @@ const ConfigForm = ({ currentConfig }: ConfigFormProps) => {
           id="priceIndividual"
           className="form-control"
           {...register("priceIndividual")}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="priceIndividual">Cena Kondičná jazda</label>
+        <input
+          type="number"
+          id="priceIndividual"
+          className="form-control"
+          {...register("priceCondDrive")}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="priceIndividual">Cena Doplnková jazda</label>
+        <input
+          type="number"
+          id="priceIndividual"
+          className="form-control"
+          {...register("priceAddDrive")}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="priceIndividual">
+          Cena Náhradná vyučovacia hodina teórie
+        </label>
+        <input
+          type="number"
+          id="priceIndividual"
+          className="form-control"
+          {...register("priceTheoryLesson")}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="priceIndividual">Cena Stojné inštruktora</label>
+        <input
+          type="number"
+          id="priceIndividual"
+          className="form-control"
+          {...register("priceStandingInstructor")}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="priceIndividual">Cena Skúška na VP skupiny B</label>
+        <input
+          type="number"
+          id="priceIndividual"
+          className="form-control"
+          {...register("priceExamFee")}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="priceIndividual">
+          Cena Opakovaná skúška na VP skupiny B
+        </label>
+        <input
+          type="number"
+          id="priceIndividual"
+          className="form-control"
+          {...register("priceExamRepeatFee")}
         />
       </div>
       <button

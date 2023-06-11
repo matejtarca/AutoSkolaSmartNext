@@ -53,7 +53,6 @@ const FormSection = ({ onSave }: FormSectionProps) => {
               súhlasíte so spracovaním osobných údajov.
             </li>
           </ul>
-          <br />
           <div className="contact">
             <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
               <input type="hidden" name="type" value="eprihlaska" />

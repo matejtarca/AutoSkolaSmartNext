@@ -24,10 +24,16 @@ model Application {
 }
 
 model Configuration {
-  id              Int     @id @default(autoincrement())
-  bannerText      String?
-  priceStandard   Int
-  priceQuick      Int
-  priceExtraQuick Int
-  priceIndividual Int
+  id                      Int     @id @default(autoincrement())
+  bannerText              String?
+  priceStandard           Int
+  priceQuick              Int
+  priceExtraQuick         Int
+  priceIndividual         Int
+  priceCondDrive          Int
+  priceAddDrive           Int
+  priceTheoryLesson       Int
+  priceStandingInstructor Int
+  priceExamFee            Int
+  priceExamRepeatFee      Int
 }

@@ -10,17 +10,23 @@
     "test": "jest",
     "prisma-studio": "npx prisma studio",
     "prisma-update": "npx prisma db push",
+    "prisma-seed": "prisma db seed",
     "types": "tsc"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} ./prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.4.0",
     "jsonwebtoken": "^9.0.0",
     "next": "12.3.1",
     "react": "18.2.0",
+    "react-confirm-alert": "^3.0.6",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.3",
     "react-query": "^3.39.3",
-    "styled-jsx": "^5.1.2"
+    "styled-jsx": "^5.1.2",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.2",

@@ -61,6 +61,12 @@ export const getServerSideProps = async ({ req }: { req: NextApiRequest }) => {
           quick: configData.priceQuick,
           superQuick: configData.priceExtraQuick,
           individual: configData.priceIndividual,
+          condDrive: configData.priceCondDrive,
+          addDrive: configData.priceAddDrive,
+          theoryLesson: configData.priceTheoryLesson,
+          standingInstructor: configData.priceStandingInstructor,
+          examFee: configData.priceExamFee,
+          examRepeatFee: configData.priceExamRepeatFee,
         },
       }
     : defaultConfig;

@@ -23,6 +23,12 @@ export const getServerSideProps: GetServerSideProps<
         quick: data.priceQuick,
         superQuick: data.priceExtraQuick,
         individual: data.priceIndividual,
+        condDrive: data.priceCondDrive,
+        addDrive: data.priceAddDrive,
+        theoryLesson: data.priceTheoryLesson,
+        standingInstructor: data.priceStandingInstructor,
+        examFee: data.priceExamFee,
+        examRepeatFee: data.priceExamRepeatFee,
       },
     };
     return {

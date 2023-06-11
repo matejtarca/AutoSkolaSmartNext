@@ -8,7 +8,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== "DELETE") {
     res.status(405).end();
     return;
   }
@@ -34,23 +34,10 @@ export default async function handler(
     return;
   }
 
-  const { bannerText, prices } = JSON.parse(req.body);
-  await prisma.configuration.update({
-    where: { id: 1 },
-    data: {
-      bannerText,
-      priceStandard: prices.standard,
-      priceQuick: prices.quick,
-      priceExtraQuick: prices.superQuick,
-      priceIndividual: prices.individual,
-      priceAddDrive: prices.addDrive,
-      priceCondDrive: prices.condDrive,
-      priceExamRepeatFee: prices.examRepeatFee,
-      priceExamFee: prices.examFee,
-      priceTheoryLesson: prices.theoryLesson,
-      priceStandingInstructor: prices.standingInstructor,
-    },
+  const { id } = JSON.parse(req.body);
+  await prisma.application.delete({
+    where: { id },
   });
 
-  res.status(200).json({ message: "Configuration saved" });
+  res.status(200).json({ message: "Application deleted" });
 }

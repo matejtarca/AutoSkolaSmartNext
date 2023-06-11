@@ -5,6 +5,12 @@ export type Prices = {
   quick: number;
   superQuick: number;
   individual: number;
+  condDrive: number;
+  addDrive: number;
+  theoryLesson: number;
+  standingInstructor: number;
+  examFee: number;
+  examRepeatFee: number;
 };
 
 export type Config = {
