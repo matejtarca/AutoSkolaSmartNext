@@ -12,7 +12,7 @@ const jost = Jost({
 });
 
 const openSans = Open_Sans({
-  weight: "400",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
