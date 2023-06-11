@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
-import { Message } from "../../../services/types";
+import { MessageForm } from "../../../services/types";
 
 type ContactFormFields = {
   name: string;
@@ -9,9 +9,13 @@ type ContactFormFields = {
   message: string;
 };
 
-const ContactSection = () => {
+type ContactSectionProps = {
+  onSend?: () => void;
+};
+
+const ContactSection = ({ onSend }: ContactSectionProps) => {
   const { register, handleSubmit, reset } = useForm<ContactFormFields>({});
-  const { mutateAsync } = useMutation((data: Message) => {
+  const { mutateAsync } = useMutation((data: MessageForm) => {
     return fetch("/api/send-message", {
       method: "POST",
       body: JSON.stringify(data),
@@ -20,6 +24,9 @@ const ContactSection = () => {
   const onSubmit = async (data: ContactFormFields) => {
     await mutateAsync(data);
     reset();
+    if (onSend) {
+      onSend();
+    }
   };
   return (
     <section className="contact" id="contact">

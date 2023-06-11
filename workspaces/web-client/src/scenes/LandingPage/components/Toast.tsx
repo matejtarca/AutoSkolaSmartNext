@@ -19,10 +19,11 @@ type ToastProps = {
 const Toast = ({ text }: ToastProps) => {
   return (
     <div
-      className="toast successtoast"
+      className="toast successtoast show"
       role="alert"
       aria-live="assertive"
       aria-atomic="true"
+      style={{ zIndex: 9999 }}
     >
       <div className="toast-header">
         <strong className="mr-auto">Autoškola SMART</strong>

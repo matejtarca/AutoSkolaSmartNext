@@ -26,3 +26,9 @@ export type Applications = (Omit<Application, "createdAt" | "birthdate"> & {
 export type Messages = (Omit<Message, "createdAt"> & {
   createdAt: string;
 })[];
+
+export type MessageForm = {
+  name: string;
+  email: string;
+  message: string;
+};

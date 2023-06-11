@@ -21,8 +21,8 @@ const LandingPage = ({ config }: LandingProps) => {
   const { bannerText, prices } = config;
   const [toast, setToast] = React.useState(false);
   const [toastText, setToastText] = React.useState("");
-  const onSave = () => {
-    setToastText("Vaše údaje boli úspešne odoslané.");
+  const showToast = (text: string) => {
+    setToastText(text);
     setToast(true);
     setTimeout(() => {
       setToast(false);
@@ -38,10 +38,14 @@ const LandingPage = ({ config }: LandingProps) => {
       {bannerText && <Banner text={bannerText} />}
       <main id="main">
         <AboutSection />
-        <FormSection onSave={onSave} />
+        <FormSection
+          onSave={() => showToast("Vaša prihláška bola úspešne odoslaná.")}
+        />
         <PricesSection prices={prices} />
         <GallerySection />
-        <ContactSection />
+        <ContactSection
+          onSend={() => showToast("Vaša správa bola úspešne odoslaná.")}
+        />
       </main>
       <Footer />
       {toast && <Toast text={toastText} />}
