@@ -9,3 +9,25 @@ datasource db {
   provider = "sqlite"
   url      = "file:./databases/dev.db"
 }
+
+model Application {
+  id        Int      @id @default(autoincrement())
+  name      String
+  birthdate DateTime
+  address   String
+  psc       String
+  city      String
+  email     String
+  phone     String
+  message   String?
+  createdAt DateTime @default(now())
+}
+
+model Configuration {
+  id              Int     @id @default(autoincrement())
+  bannerText      String?
+  priceStandard   Int
+  priceQuick      Int
+  priceExtraQuick Int
+  priceIndividual Int
+}
