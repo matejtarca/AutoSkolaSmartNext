@@ -3,11 +3,8 @@ import AdminPortal, {
   AdminPortalProps,
 } from "../../workspaces/web-client/src/scenes/AdminPortal/AdminPortal";
 import prisma from "../../workspaces/web-client/src/db/db";
-import {
-  Applications,
-  Config,
-} from "../../workspaces/web-client/src/services/types";
-import { GetServerSideProps, NextApiRequest, NextPage } from "next";
+import { Applications } from "../../workspaces/web-client/src/services/types";
+import { NextApiRequest, NextPage } from "next";
 import { verify } from "jsonwebtoken";
 import { defaultConfig } from "../../workspaces/web-client/src/services/consts";
 
