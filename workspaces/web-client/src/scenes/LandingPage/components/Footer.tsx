@@ -33,7 +33,7 @@ const Footer = () => {
                 <br />
                 <strong>IČ DPH:</strong> SK1020650851
                 <br />
-                <strong>IBAN:</strong> SK57 5600 0000 0070 1044 0001
+                <strong>IBAN:</strong> SK80 5600 0000 0097 6187 0001
                 <br />
                 <br />
                 Úradné hodiny streda a štvrtok od 16.00 do 18.00 (V inom čase po
