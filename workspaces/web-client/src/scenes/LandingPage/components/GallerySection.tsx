@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import auto1 from "../../../../../../public/assets/img/portfolio/webp/auto1.webp";
-import auto2 from "../../../../../../public/assets/img/portfolio/webp/auto2.webp";
-import auto3 from "../../../../../../public/assets/img/portfolio/webp/auto3.webp";
+import auto1 from "../../../../../../public/assets/img/portfolio/webp/opel.webp";
+import auto2 from "../../../../../../public/assets/img/portfolio/webp/seat-1.webp";
+import auto3 from "../../../../../../public/assets/img/portfolio/webp/seat-2.webp";
 import suzuki1 from "../../../../../../public/assets/img/portfolio/webp/Suzuki-Swift-1.webp";
 import suzuki2 from "../../../../../../public/assets/img/portfolio/webp/Suzuki-Swift-2.webp";
 import ucebna from "../../../../../../public/assets/img/portfolio/webp/ucebna1.webp";
@@ -25,7 +25,7 @@ const GallerySection = () => {
               />
             </div>
             <div className="portfolio-info">
-              <h4>Opel corsa</h4>
+              <h4>Opel Mokka</h4>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -33,7 +33,7 @@ const GallerySection = () => {
               <Image fill src={auto2} alt="Opel corsa auto" />
             </div>
             <div className="portfolio-info">
-              <h4>Opel corsa</h4>
+              <h4>Seat Ibiza</h4>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -41,7 +41,7 @@ const GallerySection = () => {
               <Image fill src={auto3} alt="Opel corsa auto" />
             </div>
             <div className="portfolio-info">
-              <h4>Opel corsa</h4>
+              <h4>Seat Ibiza</h4>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">

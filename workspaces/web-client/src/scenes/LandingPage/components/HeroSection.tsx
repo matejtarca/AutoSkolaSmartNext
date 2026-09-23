@@ -24,8 +24,8 @@ const HeroSection = () => {
               <div className="hero-img-wrapper">
                 <Image
                   className="animated"
-                  src="/assets/img/corsa-naweb-v4.webp"
-                  alt="Opel corsa auto"
+                  src="/assets/img/suzuki-floating.webp"
+                  alt="Suzuki swift auto"
                   fill
                   priority
                 />
